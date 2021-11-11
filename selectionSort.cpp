@@ -48,9 +48,7 @@ int main()
 			arr[p] = temp;
 		}
 	}
-//	int x=9;
-//	int y = 6;
-//	printf("%d %d",swap(x,y));
+
 	for(i = 0; i<SIZE; i++)
 	{
 		printf("%d ", arr[i]);
