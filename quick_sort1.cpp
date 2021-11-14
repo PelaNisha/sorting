@@ -1,5 +1,14 @@
 // quick sort
 
+/************ algorithm for quick sort***********/
+// 1. chose a pivot
+// 2. set a left pointer and right pointer
+// 3. compare those pointer with th pivot
+// 4. if lelement<pivot, increment left pointer and if relement>pivot, decrement the right pointer
+// 6. when left>=right, swap the pivot with either left or right pointer
+// 7. repeat till the entire list is sorted
+
+
 #include<stdio.h>
 
 int partition(int a[10], int l, int r)
