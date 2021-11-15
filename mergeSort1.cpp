@@ -1,4 +1,11 @@
 // merge sort
+/* 
+1. splite the unsorted list into groups recursively until there is one element per group
+2. compare each of the elements and then group 
+3. repeat step 2 until the whole list is merged and sorted in the process
+
+
+*/
 #include<stdio.h>
 
 void merge(int a[], int l , int m, int r)
