@@ -25,12 +25,12 @@ int main()
 	{
 		int temp = arr[i];
 		int j = i-1;
-		while(j>=0 && arr[j]>temp)
+		while(j>=0 && arr[j]>temp)//j = 0 so that it doesn't go outof the array
 		{
-			arr[j+1]= arr[j];
-			j = j-1;
+			arr[j+1]= arr[j];//for shifting the elemennts
+			j = j-1;// to shift the index to previous index
 		}
-		arr[j+1] = temp;
+		arr[j+1] = temp;//putting value of the item to be put in the appro. position, j+1 because i = j+1;
 	}
 	for(i = 0; i<SIZE; i++)
 	{
