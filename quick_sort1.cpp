@@ -34,7 +34,7 @@ int partition(int a[10], int l, int r)
 	}
 	a[l] = a[y]; // swap the pointer with the left pointer
 	a[y] = p;
-	return y;
+	return y;// return position of pivot
 }
 
 void quicksort(int a[10], int l, int r)
