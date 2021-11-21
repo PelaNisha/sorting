@@ -13,26 +13,26 @@
 
 int partition(int a[10], int l, int r)
 {
-	int x = l;
-	int y = r;
-	int p = a[l], temp;
-	while(x<y)
+	int x = l; // put value of left pointer into x
+	int y = r;// put value of right pointer into x
+	int p = a[l], temp;// pivot is the leftmost item
+	while(x<y)// while left pointer>right
 	{
-		while(a[x]<=p)
+		while(a[x]<=p)// if element is less than pivot, increment the x++;
 		{
 			x++;
-		}while(a[y]>p)
+		}while(a[y]>p)// element greter than pivot , decrement the y;
 		{
 			y--;
 		}
-		if(x<y)
+		if(x<y)// if x<y, swap the elements
 		{
 			temp = a[x];
 			a[x] =a[y];
 			a[y] = temp;
 		}
 	}
-	a[l] = a[y];
+	a[l] = a[y]; // swap the pointer with the left pointer
 	a[y] = p;
 	return y;
 }
