@@ -18,16 +18,23 @@ int main()
 		printf("%d ", arr[i]);
 	}
 	printf("\n");
-	for(i = 0; i<SIZE-1; i++)// first loop
+		bool sorted = false;
+	while(!sorted)//run the loop when there is atleast one swap
 	{
-		for(int j = 0; j<SIZE-i-1; j++)// second loop from 0 to size-i-1
+		sorted = true; // assign sorted as truw
+
+		for(i = 0; i<SIZE-1; i++)// first loop
 		{
-			if(arr[j]>arr[j+1])//if first element is greater than next
+			for(int j = i; j<SIZE-i-1; j++)// secong loop from j = i to size-i-1
 			{
-				int temp = arr[j];//swap 
-				arr[j] = arr[j+1];
-				arr[j+1] =temp;
-			}	
+				if(arr[j]>arr[j+1])
+				{
+					int temp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] =temp;
+					sorted = false;
+				}	
+			}
 		}
 	}
 	printf("The arranged list is:\n");
